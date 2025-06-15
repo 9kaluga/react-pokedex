@@ -1,18 +1,9 @@
 import React, { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useRequestPokemonQuery } from '../../utils/api/hooks';
 
 export const PokemonsPage: React.FC = () => {
   const [offset, setOffset] = useState(0);
-  const { data, isLoading}  = useQuery({
-    queryKey: ['pokemon'],
-    queryFn: async () => {
-    const response = await fetch('https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0')
-
-      if (!response.ok) throw new Error(`Ошибка HTTP ${response.status}`);
-
-      return response.json();
-    }
-  });
+  const { data, isLoading}  = useRequestPokemonQuery({offset});
 
   console.log('isLoading', isLoading);
   console.log('data', data);
@@ -21,7 +12,7 @@ export const PokemonsPage: React.FC = () => {
 
   return (
     <div>
-        {data.count}
+        {data.data.count}
     </div>
   );
 };
