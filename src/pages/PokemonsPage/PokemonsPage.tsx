@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
-import { useRequestPokemonQuery } from '../../utils/api/hooks';
+import { Pokemon } from './Pokemon/Pokemon';
+import { useRequestPokemonQueries } from '../../utils/api/hooks/pokemon';
 
 export const PokemonsPage: React.FC = () => {
-  const [offset, setOffset] = useState(0);
-  const { data, isLoading}  = useRequestPokemonQuery({offset});
+  const [offset, setOffset] = useState(10);
+  const results = useRequestPokemonQueries({ offset });
 
-  console.log('isLoading', isLoading);
-  console.log('data', data);
+  const isLoading = results.some((result) => result.isLoading)
   
-  if (isLoading) return <p>Загружаем покемона...</p>;
+  if (isLoading) return null;
 
+  const pokemons = results.map((result: any) => result.data.data);
+  
   return (
-    <div>
-        {data.data.count}
+    <div style={{ color: 'blue'}}>
+      <div>
+        <button onClick={() => setOffset(offset + 10)}>Load more</button>
+        {pokemons.map((pokemon, index) => (
+        <Pokemon pokemon={pokemon} key={index}/>
+        ))}</div>
+
     </div>
   );
 };
