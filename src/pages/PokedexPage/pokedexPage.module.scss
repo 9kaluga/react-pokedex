@@ -1,0 +1,45 @@
+.page_container {
+    min-height: 100vh;
+    border: solid red 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_container {
+    border: solid red 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_container {
+    border: solid red 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list_container {
+    border: solid red 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pokemon_item {
+    border: solid red 1px;
+    border-radius: 10px;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemon_item_img {
+    border: solid red 1px;
+    width: 80px;
+    height: 80px;
+}

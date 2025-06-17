@@ -1,2 +1,2 @@
-export * from './PokemonPage/PokemonPage';
+export * from './PokedexPage/PokedexPage';
 import * from './PokemonsPage/PokemonsPage';
