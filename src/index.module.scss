@@ -1,0 +1,20 @@
+
+button {
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 25vw;
+    border: solid blue 1px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.cards {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../../index.module.scss';
 
 interface PocemonProps {
     pokemon: any;
@@ -7,8 +8,9 @@ interface PocemonProps {
 export const Pokemon: React.FC<PocemonProps> = ({ pokemon }) => {
   
     return (
-        <div>
+        <div className={styles.card}>
             <img src={pokemon.sprites.front_default} alt="pokemon img" />
+            <br />
             {pokemon.name}
         </div>
     );

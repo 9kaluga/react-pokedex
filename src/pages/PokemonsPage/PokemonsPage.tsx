@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Pokemon } from './Pokemon/Pokemon';
 import { useRequestPokemonQueries } from '../../utils/api/hooks/pokemon';
+import styles from '../../index.module.scss';
 
 export const PokemonsPage: React.FC = () => {
-  const [offset, setOffset] = useState(10);
+  const [offset, setOffset] = useState(3);
   const results = useRequestPokemonQueries({ offset });
 
   const isLoading = results.some((result) => result.isLoading)
@@ -13,13 +14,13 @@ export const PokemonsPage: React.FC = () => {
   const pokemons = results.map((result: any) => result.data.data);
   
   return (
-    <div style={{ color: 'blue'}}>
-      <div>
-        <button onClick={() => setOffset(offset + 10)}>Load more</button>
+    <div>
+      <button onClick={() => setOffset(offset + 3)}>Load more</button>
+      <div className={styles.cards}>
         {pokemons.map((pokemon, index) => (
         <Pokemon pokemon={pokemon} key={index}/>
-        ))}</div>
-
+        ))}
+      </div>
     </div>
   );
 };
