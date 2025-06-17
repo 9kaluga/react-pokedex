@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Pokemon } from './Pokemon/Pokemon';
 import { useRequestPokemonQueries } from '../../utils/api/hooks/pokemon';
-import styles from '../../index.module.scss';
+import styles from './pokemonsPage.module.scss';
 
 export const PokemonsPage: React.FC = () => {
   const [offset, setOffset] = useState(3);
