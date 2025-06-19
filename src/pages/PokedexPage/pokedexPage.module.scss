@@ -20,6 +20,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: whitesmoke;
+    opacity: 0.7;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px lightslategray;
 }
 
 .list {
@@ -32,13 +36,13 @@
 
 .pokemon_item {
     border-radius: 10px;
-    width: 25vw;
+    width: 30vw;
     display: flex;
     align-items: center;
     justify-content:first baseline;
     background-color: grey;
     opacity: 0.7;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 
 .pokemon_item:hover {
@@ -64,4 +68,27 @@
     border-radius: 10px;
     width: 80px;
     height: 80px;
+}
+
+
+
+
+.card_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_title_name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card_title_id {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card img {
+    height: 200px;
+    width: 200px;
 }
