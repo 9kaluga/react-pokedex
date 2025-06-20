@@ -12,6 +12,10 @@ type AbilityList = {
   ability: {name: string};
 }
 
+type TypeList = {
+  type: {name: string};
+}
+
 export const PokemdexPage: React.FC = () => {
   const [offset, setOffset] = useState(6);
   const [selectedPokemonId, setSelectedPokemonId] = useState(1);
@@ -38,7 +42,7 @@ export const PokemdexPage: React.FC = () => {
               <div className={styles.card_title_id}>#00{selectedPokemon.id}</div>
             </div>
             <div className={styles.card_types}>
-              {selectedPokemon.types.map((type) => (
+              {selectedPokemon.types.map((type: TypeList) => (
                 <div className={styles.card_type}>
                   {type.type.name}
                 </div>
