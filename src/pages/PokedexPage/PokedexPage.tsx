@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './pokedexPage.module.scss'
 import { useRequestPokemonQueries } from '../../utils/api/hooks/pokemon';
+import { useRequestPokemonFormQuery } from '../../utils/api/hooks';
 // import { useRequestStatQuery } from '../../utils/api/hooks';
 
 type StatList = {
@@ -24,6 +25,9 @@ export const PokemdexPage: React.FC = () => {
   // const stat = useRequestStatQuery({id: 1});
   // console.log('stat', stat);
   
+  const form = useRequestPokemonFormQuery({id: 1});
+  console.log('pokemon-form', form);
+  
 
   const isLoading = results.some((result) => result.isLoading)
   if (isLoading) return null;
@@ -43,7 +47,9 @@ export const PokemdexPage: React.FC = () => {
             </div>
             <div className={styles.card_types}>
               {selectedPokemon.types.map((type: TypeList) => (
-                <div className={styles.card_type}>
+                <div className={styles.card_type}
+                  key={type.type.name}
+                >
                   {type.type.name}
                 </div>
               ))}
