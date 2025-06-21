@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './pokemon.module.scss';
 
-interface PocemonProps {
+interface PokemonProps {
     pokemon: any;
 }
 
-export const Pokemon: React.FC<PocemonProps> = ({ pokemon }) => {
+export const Pokemon: React.FC<PokemonProps> = ({ pokemon }) => {
   
     return (
         <div className={styles.card}>
