@@ -1,8 +1,8 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { PokemonsPage } from './pages/PokemonsPage/PokemonsPage';
-import { PokemdexPage } from './pages/PokedexPage/PokedexPage';
+import { PokedexPage } from './pages/PokedexPage/PokedexPage';
 import { ROUTES } from './utils/api/constants/routes';
-import { Layout }  from './Layout'
+import { Layout }  from '../src/common/layout/index'
 
 export const App = () => {
 
@@ -11,7 +11,8 @@ export const App = () => {
         <Routes>
           <Route element={<Layout />}>
             <Route path={ROUTES.POKEMONS} element={<PokemonsPage />} />
-            <Route path={ROUTES.POKEDEX} element={<PokemdexPage />} />
+            <Route path={ROUTES.POKEDEX} element={<PokedexPage />} />
+            <Route path='/' element={<Navigate to={ROUTES.POKEMONS} />} />
           </Route>
         </Routes>
     </BrowserRouter>

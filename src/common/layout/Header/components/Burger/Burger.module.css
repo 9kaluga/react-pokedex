@@ -1,0 +1,50 @@
+.burger {
+  width: 2.75rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+  
+  div {
+    height: 4px;
+    border-radius: 0.5rem;
+    background-color: #3B82F6;
+    transition: 0.2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    width: 100%;
+    
+    &.dark {
+      background-color: #Cbd5e1;
+    }
+  }
+}
+
+.active {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: rgba(59, 130, 246, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &.dark {
+    background-color: #4B5563;
+  }
+
+  div {
+    background-color: #F3F4F6;
+
+    &:nth-of-type(1) {
+      width: 50%;
+      transform-origin: bottom;
+      transform: rotateZ(45deg) translateX(5px) translateY(3px);
+    }
+
+    &:nth-of-type(2) {
+      width: 100%;
+      transform-origin: top;
+      transform: rotateZ(-45deg);
+    }
+
+    &:nth-of-type(3) {
+      width: 50%;
+      transform-origin: bottom;
+      transform: translateX(12px) translateY(-8px) rotateZ(45deg);
+    }
+  }
+}

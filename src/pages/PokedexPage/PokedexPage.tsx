@@ -17,7 +17,7 @@ type TypeList = {
   type: {name: string};
 }
 
-export const PokemdexPage: React.FC = () => {
+export const PokedexPage: React.FC = () => {
   const [offset, setOffset] = useState(6);
   const [selectedPokemonId, setSelectedPokemonId] = useState(1);
   const results = useRequestPokemonQueries({ offset });
