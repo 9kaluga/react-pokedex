@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { requestPokemonForm } from "../../../requests/pokemon-form/id";
+import { requestPokemonForm } from "../requests/pokemon-form/id";
 
 interface UseRequestPokemonFormParams {
     id: number;

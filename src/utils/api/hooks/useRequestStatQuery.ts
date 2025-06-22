@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { requestStat } from "../../../requests/stat/id";
+import { requestStat } from "../requests/stat/id";
 
 interface UseRequestPokemonQueryParams {
     id: number;

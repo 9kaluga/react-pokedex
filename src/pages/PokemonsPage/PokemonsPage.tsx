@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Pokemon } from './Pokemon/Pokemon';
-import { useRequestPokemonQueries } from '../../utils/api/hooks/pokemon';
+import { useRequestPokemonQueries } from '../../utils/api/hooks/useRequestPokemonQueries';
 import styles from './pokemonsPage.module.scss';
 
 export const PokemonsPage: React.FC = () => {

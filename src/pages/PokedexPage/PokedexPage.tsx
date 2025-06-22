@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './pokedexPage.module.scss'
-import { useRequestPokemonQueries } from '../../utils/api/hooks/pokemon';
-import { useRequestPokemonFormQuery } from '../../utils/api/hooks';
+import { useRequestPokemonQueries } from '../../utils/api/hooks/useRequestPokemonQueries';
+import { useRequestPokemonFormQuery } from '../../utils/api/hooks/useRequestPokemonFormQuery';
 // import { useRequestStatQuery } from '../../utils/api/hooks';
 
 type StatList = {

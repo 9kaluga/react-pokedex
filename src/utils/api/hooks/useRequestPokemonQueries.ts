@@ -1,5 +1,5 @@
 import { useQueries, useQuery } from "@tanstack/react-query";
-import { requestPokemon } from "../../requests";
+import { requestPokemon } from "../requests";
 
 interface UseRequestPokemonQueriesParams {
     offset: number;
