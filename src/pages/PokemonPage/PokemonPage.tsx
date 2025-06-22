@@ -5,7 +5,7 @@ export const PokemonPage: React.FC = () => {
     const params = useParams();
     console.log('params', params);
     
-    const { data } = useRequestPokemonQuery({ params: {id: +(params.pokemonId as string) } });
+    const { data } = useRequestPokemonQuery( {id: +(params.pokemonId as string) });
     
     return <div className='container'>{data?.data.name}</div>
 }
