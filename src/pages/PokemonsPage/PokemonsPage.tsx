@@ -15,7 +15,8 @@ export const PokemonsPage: React.FC = () => {
   
   return (
     <div>
-      <button onClick={() => setOffset(offset + 3)}>Load more</button>
+      <button className={styles.btnLoad}
+        onClick={() => setOffset(offset + 3)}>Load more</button>
       <div className={styles.cards}>
         {pokemons.map((pokemon, index) => (
         <Pokemon pokemon={pokemon} key={index}/>

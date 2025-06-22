@@ -1,11 +1,20 @@
+* {
+  font-family: 'Courier New', Courier, monospace !important;
+}
 
 button {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .card {
-    width: 25vw;
-    border: solid blue 1px;
-    border-radius: 10px;
-    padding: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 25vw;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: whitesmoke;
+  opacity: 0.7;
+  box-shadow: 5px 5px 5px rgb(126, 175, 224);
 }

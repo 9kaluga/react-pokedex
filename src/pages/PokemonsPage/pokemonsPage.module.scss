@@ -1,9 +1,26 @@
-
 .cards {
-    display: flex;
-    align-items: stretch;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.btnLoad {
+  margin: 10px 0px 20px 50px;
+  background-color: whitesmoke;
+  opacity: 0.7;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(126, 175, 224);
+  border-style: hidden;
+}
+
+.btnLoad:hover {
+  background-color: red;
+}
+
+.btnLoad:active {
+  background-color: blue;
+  transform: scale(1.1);
 }
