@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { Typography } from '../../../../../common/Typography/Typography';
-import { ROUTES } from '../../../../../utils/api/constants';
+import { ROUTES } from '../../../../../utils/constants';
 
 import styles from './DesktopHeader.module.css';
 
@@ -18,8 +18,13 @@ export const DesktopHeader = () => {
                 <Typography variant='title-regular'>
                   <Link to={ROUTES.POKEMONS}>Pokemons</Link>
                 </Typography>
-                </li>
-                <li>
+              </li>
+              <li>
+                <Typography variant='title-regular'>
+                  <Link to={ROUTES.POKEMON}>Pokemon</Link>
+                </Typography>
+              </li>
+              <li>
                 <Typography variant='title-regular'>
                   <Link to={ROUTES.POKEDEX}>Pokedex</Link>
                 </Typography>

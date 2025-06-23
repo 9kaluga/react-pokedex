@@ -1,13 +1,12 @@
-import { useQuery } from "@tanstack/react-query";
-import { requestPokemon } from "../requests/pokemon/id/encounters";
+import { useQuery } from '@tanstack/react-query';
+import { requestPokemon } from '../requests/pokemon/id/encounters';
 
 interface UseRequestPokemonQueryParams {
-    id: number;
+  id: number;
 }
 
-export const useRequestPokemonQuery = (
-    params: RequestParams<UseRequestPokemonQueryParams>) => 
-    useQuery({
-      queryKey: [`pokemon${params.id}`],
-      queryFn: () => requestPokemon({ params })
+export const useRequestPokemonQuery = (params: RequestParams<UseRequestPokemonQueryParams>) =>
+  useQuery({
+    queryKey: [`pokemon${params.id}`],
+    queryFn: () => requestPokemon({ params })
   });

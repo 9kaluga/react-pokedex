@@ -1,4 +1,4 @@
-import { useTheme } from '@utils/contexts';
+import { useTheme } from '../../../utils/contexts';
 
 const Sun = () => (
   <svg viewBox='0 0 24 24' width='30' height='30'>

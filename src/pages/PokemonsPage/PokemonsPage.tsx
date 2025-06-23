@@ -1,27 +1,60 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Pokemon } from './Pokemon/Pokemon';
-import { useRequestPokemonQueries } from '../../utils/api/hooks/useRequestPokemonQueries';
+import { Spinner } from '../../common/Spinner/Spinner';
+import { useRequestPokemonInfiniteQuery } from '../../utils/api/hooks/useRequestPokemonInfiniteQuery';
+import { useInView } from 'react-intersection-observer';
+import { getPokemonId } from '../../utils/helpers';
+
 import styles from './pokemonsPage.module.scss';
 
 export const PokemonsPage: React.FC = () => {
-  const [offset, setOffset] = useState(3);
-  const results = useRequestPokemonQueries({ offset });
+  const { ref, inView } = useInView();
+  const [selectedPokemonId, setSelectedPokemonId] = React.useState<Pokemon['id'] | null>(null);
+  const { data, fetchNextPage, isLoading, hasNextPage } = useRequestPokemonInfiniteQuery();
 
-  const isLoading = results.some((result) => result.isLoading)
-  
-  if (isLoading) return null;
+  console.log('inView', inView);
 
-  const pokemons = results.map((result: any) => result.data.data);
-  
+  useEffect(() => {
+    if (inView) {
+      fetchNextPage();
+    }
+  }, [fetchNextPage, inView]);
+
+  if (isLoading || !data) return <Spinner />;
+
+  const pokemons = data.pages.reduce(
+    (pokemons: NamedAPIResource[], { data }) => [...pokemons, ...data.results],
+    []
+  );
+  console.log('pokemons: ', pokemons);
+
   return (
-    <div>
-      <button className={styles.btnLoad}
-        onClick={() => setOffset(offset + 3)}>Load more</button>
-      <div className={styles.cards}>
-        {pokemons.map((pokemon, index) => (
-        <Pokemon pokemon={pokemon} key={index}/>
-        ))}
+    <div className='page'>
+      <div className={styles.pokemons_container}>
+        {pokemons.map((pokemon, index) => {
+          const id = index + 1;
+
+          return (
+            <div
+              key={id}
+              className='card'
+              role='button'
+              tabIndex={0}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter') setSelectedPokemonId(id);
+              }}
+              onClick={() => setSelectedPokemonId(id)}
+            >
+              <div key={index} className={styles.pokemon}>
+                <div className={styles.pokemon_name}>{pokemon.name}</div>
+                <div className={styles.pokemon_number}>{getPokemonId(id)}</div>
+                <Pokemon pokemon={pokemon} id={id} key={index} />
+              </div>
+            </div>
+          );
+        })}
       </div>
+      <div ref={ref} />
     </div>
   );
 };
