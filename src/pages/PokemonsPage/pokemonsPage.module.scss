@@ -1,3 +1,7 @@
+* {
+  font-family: 'Courier New', Courier, monospace !important;
+}
+
 .pokemons_container {
   display: flex;
   align-items: stretch;
@@ -7,20 +11,24 @@
   gap: 20px;
 }
 
-.btnLoad {
-  margin: 10px 0px 20px 50px;
+.pokemon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 25vw;
+  border-radius: 10px;
+  padding: 5px;
   background-color: whitesmoke;
   opacity: 0.7;
-  border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(126, 175, 224);
-  border-style: hidden;
 }
 
-.btnLoad:hover {
+.pokemon:hover {
   background-color: red;
 }
 
-.btnLoad:active {
+.bpokemon:active {
   background-color: blue;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }

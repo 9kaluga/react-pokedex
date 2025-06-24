@@ -6,7 +6,6 @@ import { ROUTES } from '../../../../../utils/constants';
 import styles from './DesktopHeader.module.css';
 
 export const DesktopHeader = () => {
-
   return (
     <div className={styles.desktop_header_container}>
       <div className={styles.desktop_header}>
@@ -17,11 +16,6 @@ export const DesktopHeader = () => {
               <li>
                 <Typography variant='title-regular'>
                   <Link to={ROUTES.POKEMONS}>Pokemons</Link>
-                </Typography>
-              </li>
-              <li>
-                <Typography variant='title-regular'>
-                  <Link to={ROUTES.POKEMON}>Pokemon</Link>
                 </Typography>
               </li>
               <li>

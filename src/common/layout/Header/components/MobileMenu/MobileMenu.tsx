@@ -32,11 +32,6 @@ export const MobileMenu = () => {
               </li>
               <li>
                 <Typography variant='title-regular'>
-                  <Link to={ROUTES.POKEMON}>Pokemon</Link>
-                </Typography>
-              </li>
-              <li>
-                <Typography variant='title-regular'>
                   <Link to={ROUTES.POKEDEX}>Pokedex</Link>
                 </Typography>
               </li>

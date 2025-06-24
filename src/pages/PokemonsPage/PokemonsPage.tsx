@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Pokemon } from './Pokemon/Pokemon';
+// import { Pokemon } from './Pokemon/Pokemon';
 import { Spinner } from '../../common/Spinner/Spinner';
 import { PokemonModal } from '../../common/modals';
 import { useRequestPokemonInfiniteQuery } from '../../utils/api/hooks/useRequestPokemonInfiniteQuery';

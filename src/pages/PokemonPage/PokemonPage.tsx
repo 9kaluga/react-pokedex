@@ -24,6 +24,7 @@ export const PokemonPage: React.FC = () => {
   return (
     <div className={styles.page}>
       <div
+        className={styles.btn}
         tabIndex={0}
         role='button'
         onKeyPress={(event) => {
