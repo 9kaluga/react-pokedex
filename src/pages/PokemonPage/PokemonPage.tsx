@@ -9,8 +9,8 @@ import styles from './pokemonPage.module.scss';
 export const PokemonPage: React.FC = () => {
   const navigate = useNavigate();
   const { pokemonId } = useParams();
-  //   const id = +(pokemonId as string);
-  const id = 3;
+  const id = +(pokemonId as string);
+  // const id = 3;
 
   console.log('pokemonId', pokemonId);
   console.log('id', id);

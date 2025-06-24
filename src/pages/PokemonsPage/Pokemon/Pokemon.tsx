@@ -10,12 +10,12 @@ interface PokemonProps {
 
 export const Pokemon: React.FC<PokemonProps> = ({ pokemon, id }) => {
   if (!pokemon) return null;
-  console.log('id', id);
+  // console.log('id', id);
 
   const requestPokemonByIdQuery = useRequestPokemonByIdQuery({
     id
   });
-  console.log(requestPokemonByIdQuery);
+  // console.log(requestPokemonByIdQuery);
 
   const isPokemonData = !!requestPokemonByIdQuery.data && !requestPokemonByIdQuery.isLoading;
 
