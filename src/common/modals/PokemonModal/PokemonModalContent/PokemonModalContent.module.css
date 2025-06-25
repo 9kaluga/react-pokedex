@@ -1,17 +1,20 @@
 .pokemon_modal {
-  margin-bottom: 0.5rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .pokemon_image {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .pokemon_image img {
-  width: 66.666667%;
+  display: flex;
+  width: 20em;
+  align-items: center;
 }
 
 .button_container {

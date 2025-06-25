@@ -1,190 +1,298 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 // * {
-//     outline: 1px solid red !important;
+//   outline: 1px solid red !important;
 // }
 
 .page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-    display: flex;
-    width: 30vw;
-    margin-right: 20px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: whitesmoke;
-    opacity: 0.7;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(126, 175, 224);
+  display: flex;
+  width: 50vw;
+  margin-right: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  opacity: 0.7;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(126, 175, 224);
 }
 
 .card_title {
-    display: flex;
-    width: 20vw;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 2vw;
 }
 
 .card_title_name {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .card_title_id {
-    font-size: 1.1rem;
-    font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .card_types {
-    display: flex;
-    width: 20vw;
-    
+  display: flex;
+  width: 20vw;
 }
 
 .card_type {
-    display: flex;
-    font-size: 1.1rem;
-    justify-content: left;
-    font-size: 0.9em;
-    height: 2vh;
-    padding: 0.3em;
-    margin-right: 10px;
-    border-radius: 10px;
-    background-color: grey;
-    align-items: center;
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: left;
+  font-size: 0.9em;
+  height: 2vh;
+  padding: 0.3em;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: grey;
+  align-items: center;
 }
 
 .card img {
-    height: 250px;
-    width: 250px;
+  height: 250px;
+  width: 250px;
 }
 
 .card_info {
-    display: flex;
-    width: 20vw;
-    justify-content: space-between;
-    grid-gap:20px
+  display: flex;
+  grid-gap: 20px;
 }
 
 .card_info_wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card_info_title {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .card_info_stat {
-    list-style-type:  none;
-    border-bottom: 1px solid gainsboro;
-    padding-bottom: 2px;
-    margin-bottom: 10px;
+  list-style-type: none;
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 2px;
+  margin-bottom: 10px;
 }
- 
-
-
 
 .list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .pokemon_item {
-    border-radius: 10px;
-    width: 25vw;
-    display: flex;
-    align-items: center;
-    justify-content:first baseline;
-    background-color: grey;
-    opacity: 0.7;
-    transition: transform 0.5s;
-    box-shadow: 5px 5px 5px rgb(126, 175, 224);
+  border-radius: 10px;
+  width: 25vw;
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+  background-color: grey;
+  opacity: 0.7;
+  transition: transform 0.5s;
+  box-shadow: 5px 5px 5px rgb(126, 175, 224);
 }
 
 .pokemon_item:hover {
-    background-color: red;
-    transform: scale(1.1);
+  background-color: red;
+  transform: scale(1.1);
 }
 
 .pokemon_item:focus {
-    background-color: blue;
-    border: none;
+  background-color: blue;
+  border: none;
 }
 
 .pokemon_item:focus:hover {
-    background-color: black;
-    transform: scale(1.1);
+  background-color: black;
+  transform: scale(1.1);
 }
 
 .pokemon_item_text {
-    color: white;
+  color: white;
 }
 
 .pokemon_item_img {
-    border-radius: 10px;
-    width: 80px;
-    height: 80px;
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
 }
 
+@media (max-width: 620px) {
+  .card {
+    width: 20vw;
+  }
+  .card_title_name {
+    font-size: 1.1rem;
+  }
+  .card_title {
+    display: flex;
+    flex-direction: column;
+  }
+  .card_types {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+  }
+  .card_info {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    justify-content: space-between;
+    grid-gap: 20px;
+  }
+  .card img {
+    height: 150px;
+    width: 150px;
+  }
+  .pokemon_item {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+  }
+}
