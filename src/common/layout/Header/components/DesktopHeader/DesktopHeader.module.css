@@ -25,6 +25,11 @@ body {
   gap: 1rem;
 }
 
+.menu_container img {
+  max-width: 100px;
+  max-height: auto;
+}
+
 .menu_container nav ul {
   display: flex;
   gap: 1rem;

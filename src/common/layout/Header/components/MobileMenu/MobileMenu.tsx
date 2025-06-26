@@ -6,6 +6,8 @@ import { Divider } from '../../../../../common/Divider/Divider';
 import { ROUTES } from '../../../../../utils/constants';
 import { Burger } from '../Burger/Burger';
 
+import pokemon_logo from '../../../../../assets/img/pokemon_logo.png';
+
 import styles from './MobileMenu.module.css';
 
 export const MobileMenu = () => {
@@ -14,7 +16,7 @@ export const MobileMenu = () => {
   return (
     <div className={styles.mobile_header_container}>
       <div className={styles.mobile_header}>
-        <Typography variant='title'>Pokemon</Typography>
+        <img src={pokemon_logo} alt='Logo' />
         <div className={styles.menu_container}>
           <Burger isActive={isActive} onClick={() => setIsActive(!isActive)} />
         </div>

@@ -16,6 +16,12 @@ body {
   justify-content: space-between;
 }
 
+.mobile_header img {
+  max-width: 100px;
+  max-height: auto;
+
+}
+
 .menu_container {
   display: flex;
   align-items: center;
