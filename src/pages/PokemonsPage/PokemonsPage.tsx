@@ -13,6 +13,7 @@ export const PokemonsPage: React.FC = () => {
   const [selectedPokemonId, setSelectedPokemonId] = React.useState<Pokemon['id'] | null>(null);
   const { data, fetchNextPage, isLoading, hasNextPage } = useRequestPokemonInfiniteQuery();
 
+  console.log('ref: ', ref);
   console.log('inView: ', inView);
   console.log('selectedPokemonId: ', selectedPokemonId);
 
@@ -62,6 +63,7 @@ export const PokemonsPage: React.FC = () => {
         onClose={() => setSelectedPokemonId(null)}
       />
       <div ref={ref} />
+      <div>.</div>
     </div>
   );
 };
