@@ -5,6 +5,7 @@ import { Typography } from '../../common/Typography/Typography';
 import { getPokemonId } from '../../utils/helpers';
 import { Spinner } from '../../common/Spinner/Spinner';
 import styles from './pokemonPage.module.scss';
+import { PokemonStats } from '../../common/pokemon/PokemonStats/PokemonStats';
 
 export const PokemonPage: React.FC = () => {
   const navigate = useNavigate();
@@ -38,15 +39,28 @@ export const PokemonPage: React.FC = () => {
       {!isPokemonData && <Spinner />}
       {isPokemonData && (
         <>
-          <div className={styles.name_container}>
-            <div className={styles.number}>{getPokemonId(id)}</div>
-            <div>{requestPokemonByIdQuery.data.data.name}</div>
-          </div>
-
           <div className={styles.content}>
-            <div className={styles.image_container}>
-              <img src={requestPokemonByIdQuery.data.data.sprites.front_default ?? ''} alt='' />
+            <div className={styles.name_container}>
+              <div className={styles.number}>{getPokemonId(id)}</div>
+              <div>{requestPokemonByIdQuery.data.data.name}</div>
             </div>
+
+            <div className={styles.content}>
+              <div className={styles.image_container}>
+                <img src={requestPokemonByIdQuery.data.data.sprites.front_default ?? ''} alt='' />
+              </div>
+            </div>
+
+            <PokemonStats
+              title='Stats'
+              stats={requestPokemonByIdQuery.data.data.stats.map(
+                (item) => `${item.stat.name}: ${item.base_stat}`
+              )}
+            />
+            <PokemonStats
+              title='Abilities'
+              stats={requestPokemonByIdQuery.data.data.abilities.map(({ ability }) => ability.name)}
+            />
           </div>
         </>
       )}

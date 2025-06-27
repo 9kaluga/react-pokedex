@@ -1,0 +1,174 @@
+.type {
+  border-radius: 0.75rem;
+  background-color: inherit;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.grass {
+  border-width: 2px;
+  border-color: #4d7c0f;
+  color: #4d7c0f;
+}
+
+.dark .grass {
+  border-color: #4ade80;
+  color: #4ade80;
+}
+
+.poison {
+  border-width: 2px;
+  border-color: #7e22ce;
+  color: #7e22ce;
+}
+
+.dark .poison {
+  border-color: #c084fc;
+  color: #c084fc;
+}
+
+.fire {
+  border-width: 2px;
+  border-color: #c2410c;
+  color: #c2410c;
+}
+
+.dark .fire {
+  border-color: #fb923c;
+  color: #fb923c;
+}
+
+.flying {
+  border-width: 2px;
+  border-color: #0284c7;
+  color: #0284c7;
+}
+
+.dark .flying {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.water {
+  border-width: 2px;
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.electric {
+  border-width: 2px;
+  border-color: #eab308;
+  color: #eab308;
+}
+
+.ground {
+  border-width: 2px;
+  border-color: #b45309;
+  color: #b45309;
+}
+
+.dark .ground {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.dark {
+  border-width: 2px;
+  border-color: #475569;
+  color: #475569;
+}
+
+.dark .dark {
+  border-color: #e5e7eb;
+  color: #e5e7eb;
+}
+
+.ice {
+  border-width: 2px;
+  border-color: #0891b2;
+  color: #0891b2;
+}
+
+.dark .ice {
+  border-color: #67e8f9;
+  color: #67e8f9;
+}
+
+.dragon {
+  border-width: 2px;
+  border-color: #0891b2;
+  color: #0891b2;
+}
+
+.dark .dragon {
+  border-color: #67e8f9;
+  color: #67e8f9;
+}
+
+.fairy {
+  border-width: 2px;
+  border-color: #be185d;
+  color: #be185d;
+}
+
+.dark .fairy {
+  border-color: #f472b6;
+  color: #f472b6;
+}
+
+.psychic {
+  border-width: 2px;
+  border-color: #7c3aed;
+  color: #7c3aed;
+}
+
+.dark .psychic {
+  border-color: #a78bfa;
+  color: #a78bfa;
+}
+
+.bug {
+  border-width: 2px;
+  border-color: #65a30d;
+  color: #65a30d;
+}
+
+.dark .bug {
+  border-color: #84cc16;
+  color: #84cc16;
+}
+
+.normal {
+  border-width: 2px;
+  border-color: #52525b;
+  color: #52525b;
+}
+
+.dark .normal {
+  border-color: #d1d5db;
+  color: #d1d5db;
+}
+
+.fighting {
+  border-width: 2px;
+  border-color: #b91c1c;
+  color: #b91c1c;
+}
+
+.dark .fighting {
+  border-color: #f43f5e;
+  color: #f43f5e;
+}
+
+.rock {
+  border-width: 2px;
+  border-color: #71717a;
+  color: #71717a;
+}
+
+.dark .rock {
+  border-color: #a1a1aa;
+  color: #a1a1aa;
+}
