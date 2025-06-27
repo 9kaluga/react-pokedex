@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Typography } from '@common';
-import { useRequestEvolutionChainQuery } from '@utils/api';
-import { generatePokemonChain } from '@utils/helpers';
+import { Typography } from '../../Typography/Typography';
+import { useRequestEvolutionChainQuery } from '../../../utils/api/hooks/useRequestEvolutionChainQuery';
+import { generatePokemonChain } from '../../../utils/helpers/generatePokemonChain';
 
 import { PokemonShortCard } from '../PokemonShortCard/PokemonShortCard';
 

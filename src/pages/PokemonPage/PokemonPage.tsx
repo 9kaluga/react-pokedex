@@ -1,11 +1,16 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useRequestPokemonByIdQuery } from '../../utils/api/hooks/useRequestPokemonByIdQuery';
+import { useRequestPokemonSpeciesQuery } from '../../utils/api/hooks/useRequestPokemonSpeciesQuery';
+
 import { Typography } from '../../common/Typography/Typography';
 import { getPokemonId } from '../../utils/helpers';
 import { Spinner } from '../../common/Spinner/Spinner';
-import styles from './pokemonPage.module.scss';
 import { PokemonStats } from '../../common/pokemon/PokemonStats/PokemonStats';
+import { Button } from '../../common/buttons/Button/Button';
+import { PokemonEvolutionChain } from '../../common/pokemon/PokemonEvolutionChain/PokemonEvolutionChain';
+
+import styles from './pokemonPage.module.scss';
 
 export const PokemonPage: React.FC = () => {
   const navigate = useNavigate();
@@ -20,7 +25,13 @@ export const PokemonPage: React.FC = () => {
     id
   });
 
+  const requestPokemonSpeciesQuery = useRequestPokemonSpeciesQuery({
+    id
+  });
+
   const isPokemonData = !!requestPokemonByIdQuery.data && !requestPokemonByIdQuery.isLoading;
+  const isPokemonSpeciesData =
+    !!requestPokemonSpeciesQuery.data && !requestPokemonSpeciesQuery.isLoading;
 
   return (
     <div className={styles.page}>
@@ -64,6 +75,29 @@ export const PokemonPage: React.FC = () => {
           </div>
         </>
       )}
+      {!isPokemonSpeciesData && isPokemonData && <Spinner />}
+      {isPokemonSpeciesData && isPokemonData && (
+        <PokemonEvolutionChain
+          chainId={
+            +requestPokemonSpeciesQuery
+              .data!.data.evolution_chain.url.replace(
+                'https://pokeapi.co/api/v2/evolution-chain/',
+                ''
+              )
+              .replace('/', '')
+          }
+          pokemonName={requestPokemonByIdQuery.data.data.name}
+        />
+      )}
+
+      <div className={styles.button_container}>
+        {id > 1 && (
+          <Button variant='outlined' onClick={() => navigate(`/pokemon/${id - 1}`)}>
+            BACK
+          </Button>
+        )}
+        <Button onClick={() => navigate(`/pokemon/${id + 1}`)}>NEXT</Button>
+      </div>
     </div>
   );
 };
