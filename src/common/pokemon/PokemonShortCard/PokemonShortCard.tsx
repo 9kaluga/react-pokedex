@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { PokemonTypes } from '@common/pokemon/PokemonTypes/PokemonTypes';
-import { useRequestPokemonByNameQuery } from '@utils/api';
+import { PokemonTypes } from '../PokemonTypes/PokemonTypes';
+import { useRequestPokemonByNameQuery } from '../../../utils/api/hooks/useRequestPokemonByNameQuery';
 
 import styles from './PokemonShortCard.module.css';
 

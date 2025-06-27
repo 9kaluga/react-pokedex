@@ -1,19 +1,29 @@
 .container {
-  @apply flex flex-col gap-3 py-5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .evolutions_container {
-  @apply mt-2 flex flex-col justify-between gap-4;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-@screen md {
+@media (min-width: 768px) {
   .evolutions_container {
-    @apply grid grid-cols-3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
   }
 }
 
-@screen lg {
+@media (min-width: 1024px) {
   .evolutions_container {
-    @apply grid grid-cols-3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    display: grid;
   }
 }

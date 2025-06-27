@@ -1,36 +1,47 @@
 .card {
-  @apply flex w-full overflow-hidden rounded-lg bg-white shadow-md;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-:global(.dark) .card {
-  @apply bg-slate-600 shadow-none;
+.dark .card {
+  background-color: #475569;
+  box-shadow: none;
 }
 
 .image_container {
-  @apply w-5/12;
+  width: 41.666667%;
 }
 
-@screen md {
+@media (min-width: 768px) {
   .image_container {
-    @apply w-1/2;
+    width: 50%;
   }
 }
 
 .image_container img {
-  @apply h-full;
-
+  height: 100%;
   transform: scale(1.7);
   transform-origin: 30% 20%;
 }
 
 .name {
-  @apply text-left text-lg font-semibold;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 .info {
-  @apply flex w-full flex-col gap-1 p-5;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1.25rem;
 }
 
 .skeleton {
-  @apply animate-pulse;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
