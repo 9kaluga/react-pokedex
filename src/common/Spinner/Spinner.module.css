@@ -1,6 +1,6 @@
  
 .spinner {
-  @extend .flex;
+  display: flex;
   height: 3rem;
   width: 3rem;
   animation: spin 1s linear infinite;
@@ -13,7 +13,7 @@
 }
 
 .spinner_container {
-  @extend .flex;
+  display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;

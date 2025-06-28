@@ -29,12 +29,16 @@ export const MobileMenu = () => {
             <ul aria-hidden onClick={() => setIsActive(false)} className={styles.navigation}>
               <li>
                 <Typography variant='title-regular'>
-                  <Link to={ROUTES.POKEMONS}>Pokemons</Link>
+                  <Link to={ROUTES.POKEMONS} className={styles.title}>
+                    Pokemons
+                  </Link>
                 </Typography>
               </li>
               <li>
                 <Typography variant='title-regular'>
-                  <Link to={ROUTES.POKEDEX}>Pokedex</Link>
+                  <Link to={ROUTES.POKEDEX} className={styles.title}>
+                    Pokedex
+                  </Link>
                 </Typography>
               </li>
             </ul>

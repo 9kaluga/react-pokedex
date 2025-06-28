@@ -12,7 +12,7 @@ export const PokemonStats: React.FC<PokemonStatsProps> = ({ title, stats }) => (
     <div className={styles.title}>{title}</div>
     <ul className={styles.stats}>
       {stats.map((item) => (
-        <li>{item}</li>
+        <li key={item}>{item}</li>
       ))}
     </ul>
   </div>

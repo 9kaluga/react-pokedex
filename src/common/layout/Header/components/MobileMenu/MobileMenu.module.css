@@ -51,3 +51,7 @@ body {
 :global(.dark) .navmenu {
   background-color: #4b5563;
 }
+
+.title {
+  text-decoration: none;
+}

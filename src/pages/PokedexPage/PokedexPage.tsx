@@ -24,9 +24,6 @@ export const PokedexPage: React.FC = () => {
   const [selectedPokemonId, setSelectedPokemonId] = useState(1);
   const results = useRequestPokemonQueries({ offset });
 
-  // const stat = useRequestStatQuery({id: 1});
-  // console.log('stat', stat);
-
   const form = useRequestPokemonFormQuery({ id: 1 });
   console.log('pokemon-form', form);
 

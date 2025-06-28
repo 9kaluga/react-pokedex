@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-// import { Pokemon } from './Pokemon/Pokemon';
 import { Spinner } from '../../common/Spinner/Spinner';
 import { PokemonModal } from '../../common/modals';
 import { useRequestPokemonInfiniteQuery } from '../../utils/api/hooks/useRequestPokemonInfiniteQuery';
@@ -12,10 +11,6 @@ export const PokemonsPage: React.FC = () => {
   const { ref, inView } = useInView();
   const [selectedPokemonId, setSelectedPokemonId] = React.useState<Pokemon['id'] | null>(null);
   const { data, fetchNextPage, isLoading, hasNextPage } = useRequestPokemonInfiniteQuery();
-
-  console.log('ref: ', ref);
-  console.log('inView: ', inView);
-  console.log('selectedPokemonId: ', selectedPokemonId);
 
   useEffect(() => {
     if (inView) {
@@ -51,7 +46,6 @@ export const PokemonsPage: React.FC = () => {
               <div key={index} className={styles.pokemon}>
                 <div className={styles.pokemon_name}>{pokemon.name}</div>
                 <div className={styles.pokemon_number}>{getPokemonId(id)}</div>
-                {/* <Pokemon pokemon={pokemon} id={id} key={index} /> */}
               </div>
             </div>
           );

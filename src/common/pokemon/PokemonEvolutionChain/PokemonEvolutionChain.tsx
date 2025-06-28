@@ -32,7 +32,7 @@ export const PokemonEvolutionChain: React.FC<PokemonEvolutionChainProps> = ({
     <div className={styles.container}>
       {!!pokemonChain.prev && (
         <>
-          <Typography variant='title'>Previos evolution</Typography>
+          <Typography variant='sub-title'>Previos evolution</Typography>
           <div className={styles.evolutions_container}>
             <PokemonShortCard name={pokemonChain.prev.species.name} />{' '}
           </div>
@@ -40,7 +40,7 @@ export const PokemonEvolutionChain: React.FC<PokemonEvolutionChainProps> = ({
       )}
       {!!pokemonChain.next.length && (
         <>
-          <Typography variant='title'>Next evolution(s)</Typography>
+          <Typography variant='sub-title'>Next evolution(s)</Typography>
           <div className={styles.evolutions_container}>
             {pokemonChain.next.map((evolution: any) => (
               <PokemonShortCard key={evolution.species.name} name={evolution.species.name} />
