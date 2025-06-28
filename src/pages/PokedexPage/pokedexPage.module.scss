@@ -164,6 +164,7 @@ table {
 .card_title_name {
   font-size: 1.5rem;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .card_title_id {
@@ -217,6 +218,11 @@ table {
   padding-bottom: 2px;
   margin-bottom: 10px;
 }
+.list_wraper {
+  max-height: 500px;
+  padding: 15px;
+  overflow-y: scroll;
+}
 
 .list {
   display: flex;
@@ -255,6 +261,7 @@ table {
 
 .pokemon_item_text {
   color: white;
+  text-transform: capitalize;
 }
 
 .pokemon_item_img {
