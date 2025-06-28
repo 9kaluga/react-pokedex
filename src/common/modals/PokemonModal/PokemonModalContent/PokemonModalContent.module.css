@@ -3,6 +3,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .pokemon_image {

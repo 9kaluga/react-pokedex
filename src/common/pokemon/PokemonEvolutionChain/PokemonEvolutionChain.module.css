@@ -14,7 +14,7 @@
   gap: 1rem;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 620px) {
   .evolutions_container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     display: grid;
@@ -26,4 +26,4 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     display: grid;
   }
-}
+} */

@@ -7,8 +7,8 @@
 
 .name_container {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
@@ -18,6 +18,13 @@
 .number {
   font-size: 1rem;
   font-weight: 300;
+}
+
+.content_wraper {
+  background-color: whitesmoke;
+  opacity: 0.7;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgb(126, 175, 224);
 }
 
 .content {
@@ -35,9 +42,14 @@
   }
 }
 
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .image_container img {
-  height: 15em;
-  width: 15em;
+  width: 100%;
 }
 
 .button_container {
